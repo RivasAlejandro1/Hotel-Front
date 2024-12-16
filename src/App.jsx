@@ -1,12 +1,21 @@
-import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom';
+import styles from "App.module.css";
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-    </>
+    <div className={styles.App}>
+    
+      {/* <Routes>
+         <Route path="/" element={<Login/>}></Route>
+        <Route path="/register" element={<Register/>}></Route>
+        <Route path="/home" element={<Home/>}></Route>
+        <Route path="/myTurns" element={<MyTurns/>}></Route>
+        <Route path="*" element={<Error/>}></Route>
+      </Routes> */}
+    </div>
+    
   )
 }
 
