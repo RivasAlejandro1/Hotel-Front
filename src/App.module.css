@@ -1,4 +1,47 @@
+:root{
+  --color1: #FEDE00;
+  --color2: #09A9C8;
+  --backgroundNav: #F8FBFA; 
+  --buttonBackground: #F8FBFA; 
+  --textColor: #030605; 
+
+  --fontFamily-title:  "ZCOOL XiaoWei", serif;
+  --fontFamily-text:  "Quicksand", serif;
+  --fontFamily-textNumber: "League Spartan", serif;
+
+}
+
+
+.title {
+  font-family: var(--title);
+  font-weight: 500;
+  font-size: 84px;
+  margin-bottom: 32px;
+}
+
+.text {
+  font-family: var(--fontFamily-text);
+  font-size: 16px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: var(--textColor);
+
+}
+
+
 .App{
-  min-height: auto;
   width: 100%;
+  max-width: 100vw;
+}
+
+.outfit {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.league-spartan {
+  font-family: "League Spartan", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
