@@ -1,0 +1,46 @@
+.li{
+    padding: 4px 12px;
+    transition: background 0.3s;
+    
+    position: relative;
+    left: 50px;
+    animation: aparecer 1s forwards; 
+
+    
+    
+}
+/* .active{
+    font-family: "Quicksand", sans-serif;
+    font-weight:  400;
+    font-style: normal;
+    color: #13f2f2;
+
+    text-decoration: none;
+    
+    transition: color 0.3s;
+
+    
+}
+.desactive{
+    font-family: "Montserrat", Italic;
+    font-weight:  600;
+    font-style: normal;
+    color: #f2f2f2;
+
+    text-decoration: none;
+    
+    transition: color 0.3s;
+}
+
+*/
+
+@keyframes aparecer {
+    to {
+        left: 0px;
+    }
+} 
+.link  {
+    outline: none;
+    text-decoration: none;
+    color: #0b1726;
+}
