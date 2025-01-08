@@ -1,0 +1,28 @@
+.RoomInfos {
+    display: grid;
+    flex-direction: column;
+    height: calc(80vh);
+    grid-template-columns: repeat(20, calc(100% / 20));
+    grid-template-rows: repeat(20, calc(100% / 20));
+
+    h1 {
+        grid-column: 3 / 10;
+        background-color:  red;
+        font-family: var(--fontFamily-title);
+        font-size: 64px;
+        position: relative;
+        right: calc(10% / 7);
+    }
+
+    .slidesContainer{
+        display: flex;
+        justify-content: space-evenly;
+        grid-column: 3 / 19;
+        grid-row: 8 / 17;
+
+        position: relative;
+        top: 6%;
+
+    }
+}
+
