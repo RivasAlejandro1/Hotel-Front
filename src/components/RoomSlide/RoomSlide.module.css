@@ -1,0 +1,43 @@
+:root{
+    --vectorWidth: 80px;
+}
+
+
+.article {
+    font-family: var(--fontFamily-text);
+    width: calc(80% / 3);
+
+    div {
+        width: var(--vectorWidth);
+        margin-bottom: 48px;
+        .vectorShadow {
+            position: absolute;
+            width: var(--vectorWidth);
+        }
+        
+        .vector {
+            width: var(--vectorWidth);
+            position: relative;
+            top: calc(var(--vectorWidth) * 10 / 100);
+            left: calc(var(--vectorWidth) * 10 / 100);
+            
+        }
+
+    }
+
+
+    h2 { 
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        width: 90%;
+
+        line-height: 26px;
+        letter-spacing: 1px;
+    }
+}
+
+
+
