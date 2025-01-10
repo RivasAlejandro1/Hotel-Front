@@ -65,6 +65,7 @@
             padding: 0px 240px 0 0px;
             line-height: 1.7;
             margin-bottom: 62px;
+            font-family: var(--fontFamily-text);
         }
 
         
@@ -86,8 +87,9 @@
             padding: 10px 20px; /* Ajusta el padding según necesites */
             box-sizing: border-box; /* Asegura que el padding se incluya dentro del tamaño total */
 
-            font-weight: 700;
+
             .button{
+                font-weight: 500;
                 background-color: var(--color1);
                 margin-right: 8px;
             }
