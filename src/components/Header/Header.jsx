@@ -5,19 +5,19 @@ export default function Header (e) {
 
     return(
         <div className={style.Header}>
-                <div className={style.grid}></div>
                 <div className={style.form1}>
                     <div className={style.textContainer}>
                         <h1 className={style.h1}>
-                        Modern Interior
-                        Design Service
+                        Posada Torremar 
                         </h1>
                         <p className={style.text}>
-                        Interiorfirm is an acclaimed multidisciplinary studio specializing in interior architecture, interior design and décor that redefines laid-back luxury.
-                        </p>
+                        Posada Torremar se
+caracteriza por ofrecer la más atenta, esmerada y personalizada atención con unas
+instalaciones modernas y confortables, cónsonas con el ambiente natural que las
+rodea.                        </p>
                         
                         <div className={style.buttonContainer}>
-                            <button className={style.button}>Explore Now</button>
+                            <button className={style.button}>Reservar</button>
                             <img src={myImage}></img>
                         </div>
                     </div>
