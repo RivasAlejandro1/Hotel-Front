@@ -1,0 +1,49 @@
+.Rooms {
+    width:  100%;
+    max-width:  100vw;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    
+
+    .shape{
+        width: 100%;
+        height: 200px;
+        background-color: var(--color2);
+        border-radius:  0 0 402px;
+        padding: 0 10%;
+
+
+        display: flex;
+        align-items: end;
+
+        h1 {
+            font-size: 62px;
+            font-family: var(--fontFamily-title);
+        }
+    
+    }
+
+
+}
+
+.InfoContainer{
+    padding:  60px 20px;
+    position: relative;
+
+    .shape1{
+        width: 200px;
+        height: calc(100% - 50px);
+        background-color: var(--color2);
+        position: absolute;
+        z-index: -1;
+        top: 60px;
+        left: 240px;
+        
+
+    }
+}
