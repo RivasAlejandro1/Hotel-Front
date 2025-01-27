@@ -3,6 +3,9 @@ import style from './Rooms.module.css';
 
 export default function Rooms (e) {
     
+    const Sencillo = [1,2,4];
+    const Doble = [3,5];
+    const Familiar = [6,7];
 
     return(
         <section className={style.Rooms}>
@@ -16,6 +19,7 @@ export default function Rooms (e) {
                     text="Cama Matrimonial y cama individual, baño privado, balcón."
                     number="1"
                     price="80"
+                    numbers={Sencillo}
                 ></RoomCard>
                 <RoomCard
                     title="Doble"
@@ -23,6 +27,7 @@ export default function Rooms (e) {
                 vista al mar."
                     number="3"
                     price="150"
+                    numbers={Doble}
                 ></RoomCard>
                 <RoomCard
                     title="Familiar"
@@ -30,6 +35,7 @@ export default function Rooms (e) {
                 vista al mar. (Cantidad: 3)"
                     number="3"
                     price="200"
+                    numbers={Familiar}
                 ></RoomCard>
             </div>
         </section>
