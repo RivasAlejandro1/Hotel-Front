@@ -10,6 +10,11 @@ import Doble from '../../assets/16.jpg';
 import Familiar from '../../assets/12.jpg';
 
 export default function ReservationCard(e) {
+
+  
+
+
+
     return(
         <div className={style.ReservationCard}>
             <div className={style.ImgContainer}>
