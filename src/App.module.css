@@ -3,6 +3,7 @@
   --color2: #09A9C8;
   --backgroundNav: #F8FBFA; 
   --buttonBackground: #F8FBFA; 
+  --Background: #F8FBFA; 
   --textColor: #030605; 
 
   --fontFamily-title:  "ZCOOL XiaoWei", serif;
@@ -45,3 +46,4 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
+
