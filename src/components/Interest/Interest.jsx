@@ -6,7 +6,7 @@ import instagramIMG from '../../assets/redes/instagram.png';
 import whatssapIMG from '../../assets/redes/whatsapp.png'; 
 export default function Interest() {
     return(
-        <section className={style.Interest}>
+        <section className={style.Interest} id="Contact">
             <div className={style.form1}>
                 <img src= {img1}></img>
             </div>
@@ -16,7 +16,7 @@ export default function Interest() {
                 <div className={style.redesIcons}>
                     <div>
                         <img src={telefonoIMG}></img>
-                        <p>+14 11111111</p>
+                        <p>+58 412-9412092</p>
                     </div>
                     <img src={instagramIMG}></img>
                     <img src={whatssapIMG}></img>
