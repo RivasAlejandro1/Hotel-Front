@@ -1,38 +1,99 @@
 import { useSelector } from "react-redux";
+import { useLocation, useNavigate, useParams} from 'react-router-dom'
 import NavButton from "../NavButton/NavButton";
 import style from './Nav.module.css';
 import logo from '../../assets/logo1.jpg';
 import Login from "../Login/Login";
+import { useEffect, useState } from "react";
+import loadingInfoLocalStorage from "./loadingInfoLocalStorage";
+import navigateAndScrollTo from "./NavigateAndScrollTo";
+import closeSesion from "./closeSesion.jsx";
 
 export default function Nav (){
-    const currentUser = useSelector(state => state.user);
+
+    //* Acomodar el login a su estado inicial - Aparacer o desaparecer 
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [ ApperLogin, setApperLogin] = useState(true);
+    const changeApperLogin = () => {
+        setApperLogin(!ApperLogin);
+    }
+    useEffect( ()=>{
+        setApperLogin(true)
+    },[location])
+    
+    
+    
+    //* CARGA DE localStorage 
+    const [typeUser, setTypeUser] = useState("");
+    useEffect(()=> {
+        const infoLocalStorage = loadingInfoLocalStorage();
+        if(infoLocalStorage) {
+            const {id, admin, token} = infoLocalStorage
+            setTypeUser({id, admin, token});
+        }else{
+            setTypeUser("");
+        }
+    }, [location])
+   
 
 
     return(
-        <nav className={style.Nav}>
-            <div  className={style.logo} >
-                <img src={logo}></img>
-            </div>
+        <>
+            <nav className={style.Nav}>
+                <div  className={style.logo} >
+                    <img src={logo}></img>
+                </div>
 
-            <ul>
-                {  
-                    currentUser ?              
-                    <NavButton path="myTurns" name="myTurns"></NavButton>
-                    : <></>
-                }  
-                <NavButton path="Inicio" name="Inicio"></NavButton>
-                <NavButton path="Acerca de" name="Acerca de"></NavButton>
-{/*                 <NavButton path="Contacto" name="Contacto"></NavButton>
- */}            <NavButton path="Habitaciones" name="Habitaciones"></NavButton>
-                <NavButton path="Registrarse" name="Registrarse"></NavButton>
-                <NavButton path="Servicios" name="Servicios"></NavButton>
-                <NavButton path="/" name="Log in"></NavButton>
-            </ul>
+                <ul>
+                    <NavButton path="inicio" name="Inicio"></NavButton>
+                    <NavButton path="QuienesSomos" name="¿Quienes Somos?"></NavButton>
+                    <NavButton path="Habitaciones" name="Habitaciones"></NavButton>
 
-            <button className={style.button}>
-                Contactanos 
-            </button>
-          {/*   <Login></Login> */}
-        </nav>
+
+                    {  typeUser?.id && typeUser?.token && typeUser?.admin  ? 
+                        <>
+                                <NavButton path="admin" name="Admin"></NavButton>
+                                <li className={style.LogIn}>
+                                    <button onClick={()=> closeSesion(navigate)}> Cerrar Sesión</button>
+                                </li>
+                        </>
+                        : typeUser?.id && typeUser?.token ?
+                        <>
+                                <NavButton path="reservaciones" name="Reservaciones"></NavButton>
+                                <li className={style.LogIn}>
+                                    <button onClick={()=> closeSesion(navigate)}> Cerrar Sesión</button>
+                                </li>
+                        </> 
+                        : 
+                        <>
+                            <NavButton path="registrarse" name="Registrarse"></NavButton>
+                            <li className={style.LogIn}>
+                                <button onClick={() => changeApperLogin()}> Iniciar Sesión</button>
+                            </li>
+                        </>
+                    }
+                        
+                </ul>
+
+
+
+                <button className={style.button} onClick={() => navigateAndScrollTo(navigate,"inicio", "Contact")}>
+                    Contactanos 
+                </button>
+            
+            </nav>
+
+            {
+            typeUser.token ?
+            <></> 
+            :
+                <Login
+                    Apper= {ApperLogin}
+                ></Login>
+            }
+     
+              
+        </>
     )
 }
