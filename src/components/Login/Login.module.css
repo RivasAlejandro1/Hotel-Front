@@ -2,14 +2,16 @@
     --LoginW: 506px;
     --InputW: 358px
 }
-.Login {
+.Login, .LogInDisApper {
+    transition: all 0.5s ease-out;
+
     width:  var(--LoginW);
     height: calc( var(--LoginW) *  349 / 506);
     overflow: hidden;
 
     background-color: var(--color2);
     border-radius: 0 0 0 150px;
-    z-index: 8;
+    z-index: 9;
     position: absolute;
     top: 120px;
     right: 0;
@@ -20,6 +22,9 @@
     justify-content: end;
 
     font-family: var(--fontFamily-text);
+
+    transform: translateY(-100%);
+    opacity: 0; 
     
     input, button{
         width: var(--InputW);
@@ -55,4 +60,30 @@
         }
     }
 
+}
+
+
+.LogInDisApper{
+    transform: translateY(0);
+    opacity: 1; 
+}
+
+@keyframes desplazarHaciaAbajo { 
+    from { 
+        transform: translateY(-100%);
+         opacity: 0; 
+    } 
+    to { 
+        transform: translateY(0);
+         opacity: 1; 
+        } 
+}
+
+.errors{
+    
+    color: #000;
+    font-weight: 800;
+    font-size: 14px;
+    border-bottom: 1px solid #f00;
+    margin-bottom: 8px;
 }
