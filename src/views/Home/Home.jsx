@@ -17,7 +17,7 @@ export default function Home (e) {
             <Header></Header>
             <HeaderInfo></HeaderInfo>
             <RoomInfos></RoomInfos>
-            <Feedback></Feedback>
+           {/*  <Feedback></Feedback> */}
             <Interest></Interest>
         </div>
         
