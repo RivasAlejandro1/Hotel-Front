@@ -3,7 +3,7 @@ export default function Footer (e) {
 
     return(
         <footer className={style.Footer}>
-            <div className={style.contentContainer}>
+          {/*   <div className={style.contentContainer}>
                 <div className={`${style.column} ${style.firstColumn}`}>
                     <span>Icon</span>
                     <p>Interiorfirm is an acclaimed multidisciplinary studio specializing in interior architecture, interior design.</p>
@@ -40,7 +40,7 @@ export default function Footer (e) {
                     <span>Material</span>
                     <span>Material</span>
                 </div>
-            </div>
+            </div> */}
             <div className={style.border}></div>
             <div className={style.copyright}>
                 <span>© Copyright 2021 Interiorfirm ― All Rights Reserved.</span>
