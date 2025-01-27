@@ -1,6 +1,7 @@
 import style from './Header.module.css'
 import myImage from '../../helpers/line 19.png'; 
 import firstImage from '../../assets/1.jpg'; 
+import { Link } from 'react-router-dom';
 export default function Header (e) {
 
     return(
@@ -12,14 +13,15 @@ export default function Header (e) {
                         </h1>
                         <p className={style.text}>
                         Posada Torremar se
-caracteriza por ofrecer la más atenta, esmerada y personalizada atención con unas
-instalaciones modernas y confortables, cónsonas con el ambiente natural que las
-rodea.                        </p>
+                        caracteriza por ofrecer la más atenta, esmerada y personalizada atención con unas
+                        instalaciones modernas y confortables, cónsonas con el ambiente natural que las
+                        rodea.                        </p>
                         
-                        <div className={style.buttonContainer}>
-                            <button className={style.button}>Reservar</button>
-                            <img src={myImage}></img>
-                        </div>
+                            
+                            <Link to={"/habitaciones"}  className={style.buttonContainer}>
+                                <button className={style.button}>Reservar</button>
+                                <img src={myImage}></img>
+                            </Link>
                     </div>
                 </div>
                 <div className={style.form2}>

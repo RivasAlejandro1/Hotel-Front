@@ -70,6 +70,7 @@
 
         
         .buttonContainer {
+            text-decoration: none;
             margin: 0 auto;
             margin-right: 160px;
             font-family: var(--fontFamily-text);
