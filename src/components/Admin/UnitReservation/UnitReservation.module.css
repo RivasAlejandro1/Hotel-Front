@@ -1,0 +1,56 @@
+.UnitReservation{
+    width: 1200px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    
+    margin-right: 16px;
+    margin-bottom: 12px;
+    padding: 4px 40px;
+    font-size: 18px;
+    .text {
+        font-family: var(--fontFamily-text);
+        width: calc(1200px / 8);
+        max-width: 200px;
+        border: 1px solid var(--color2);
+        border-top: 2px solid var(--color2);
+        border-bottom: 0px solid var(--color2);
+        padding: 0 10px;
+        background-color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        font-size: 14px;
+        font-weight: 600;
+
+        
+
+    }
+
+    .button {
+        background-color: #d00;
+        color: var(--Background);
+        font-weight: 600;
+        cursor: pointer;
+        
+    }
+
+}
+
+.UnitReservationAdmin{
+    position: relative;
+    z-index: 1;
+    height: 60px;
+    color: var(--Background);
+    .text{
+        background-color: var(--textColor);
+        font-weight: 500;
+        font-size: 18px;
+
+    }
+
+
+}
