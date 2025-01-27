@@ -27,7 +27,6 @@
     .form1 {
         grid-column: 1 / 9;
         grid-row: 3 / 13;
-        background-color: green;
     }
     .form2 {
         box-sizing: border-box;
@@ -35,8 +34,6 @@
         grid-row: 7  / 15;
         border-top: 16px solid #fff;
         border-left: 16px solid #fff;
-    
-        background-color: green;
         border-radius: 0 0 200px;
 
         overflow: hidden;
