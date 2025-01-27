@@ -47,3 +47,19 @@
 
     }
 }
+
+.Nothing{
+    font-family: var(--fontFamily-title);
+    font-size: 30px;
+    width: 800px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color1);
+    position: relative;
+    left: -20px;
+    text-align: center;
+    background-color: none;
+    
+}
